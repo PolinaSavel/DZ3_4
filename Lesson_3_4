@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Lesson_3_4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число №1: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Введите число №2: ");
+        int num2  = scanner.nextInt();
+        int a = num1%2;
+        int c = num1%3;
+        int b = num2%3;
+        double k = Math.pow(num1, num2);
+
+        if (a==0 || b==0) {
+
+            if (num1 < num2) {
+                System.out.println("Второ число больше");
+            } else if (num1 > num2) {
+                System.out.println("Второ число меньше");
+            } else {
+                System.out.println("Числа равны");
+            }
+        }
+        if (a==0 && c==0) {
+            if (k < -2147483648 || k > 2147483647) {
+                System.out.println("Результат выражения не корректный");
+            }
+            else {
+                System.out.println("Число:" + num1+ " в степени "+ num2+ " = " + k);
+            }
+        }
+        else {
+                System.out.println("Что-то пошло не так");
+            }
+    }
+}
